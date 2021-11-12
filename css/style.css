@@ -55,7 +55,7 @@ p{
 
 header{
     width: 100%;
-    background-color:#ccff33;
+    background-color:#f8f4e6;
 }
 
 header >.container{
@@ -177,7 +177,7 @@ header >.container{
         left: 0;
         z-index: 80;
         padding: 70px 10px 0;
-        background-color:#ccff33;
+        background-color:#f8f4e6;
     }
     .head_nav_list li {
         list-style: none;
@@ -225,8 +225,16 @@ header >.container{
 
 .area_top_view{
     background: url(../img/main.jpg) no-repeat center top;
-    height: 500px;
+    background-size: cover;
 }
+
+.area_top_view > .container{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 
