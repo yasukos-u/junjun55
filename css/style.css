@@ -14,12 +14,36 @@ a{
     color: black;
 }
 
+h1{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 600; 
+}
+
 h2{
     font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    
 }
 
 h3{
     font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.4rem;
+}
+
+h5{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+h6{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 600;
 }
 
 p{
@@ -28,24 +52,18 @@ p{
 }
 
 .container{
-    
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
-.container_content{
-    width: 70%;
-    margin: 0 auto;
-}
 
 
 @media screen and (min-width: 640px) {
-    .container_content{
+    .container{
         width: 700px;
         margin: 0 auto;
+      
     }
-    
-  
 }
 
 
@@ -55,7 +73,7 @@ p{
 
 header{
     width: 100%;
-    background-color:#fff;
+    
 }
 
 header >.container{
@@ -177,7 +195,7 @@ header >.container{
         left: 0;
         z-index: 80;
         padding: 70px 10px 0;
-        background-color:#fff;
+        background-color:#ffec47;
     }
     .head_nav_list li {
         list-style: none;
@@ -242,17 +260,123 @@ header >.container{
   
 }
 
+/* ----------------------------------------------------------------------------------
+コンセプト
+------------------------------------------------------------------------------------*/
+
+.concept{
+    background-color:#ffec47;
+}
+
+.concept > .container{
+    padding: 80px 0;
+}
+
+
+/* ----------------------------------------------------------------------------------
+特徴＿3つのポイント
+------------------------------------------------------------------------------------*/
+.feature > .container{
+    padding: 80px 0 40px 0;
+  
+}
+
+.point{
+    margin-bottom: 50px;
+}
+
+
+/* ----------------------------------------------------------------------------------
+コース・授業料
+------------------------------------------------------------------------------------*/
+
+.menu{
+    background-color:#ffec47;
+}
+
+.menu > .container{
+    padding: 80px 0;
+}
+
+.left_border{
+    padding: 0.3rem 1rem;
+    border-left: 4px solid #000;
+}
+
+
+/* ----------------------------------------------------------------------------------
+声
+------------------------------------------------------------------------------------*/
+.white{
+    background-color: #fff; 
+}
+
+.line{
+  padding: 1rem 2rem;
+  border-top: 3px dashed #ffec47;
+  border-bottom: 3px dashed #ffec47;
+}
 
 
 
+.box_voice{
+    width: 80%;
+    margin: 50px auto 0 ;
+}
+
+
+.box_comment{
+    padding-top: 30px;
+}
+
+.pink {
+    position: relative;
+    padding: 1.5rem 2rem;
+    color: #fff;
+    border-radius: 10px;
+    background: #e95295;
+   
+  }
+  
+  .pink:after {
+    position: absolute;
+    bottom: -9px;
+    left: 1em;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #e95295 transparent transparent transparent;
+  }
+
+  /* ----------------------------------------------------------------------------------
+保護者の声
+------------------------------------------------------------------------------------*/
+h6 {
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  h6:before {
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #000;
+  }
 /* ----------------------------------------------------------------------------------
 フッター画像
 ------------------------------------------------------------------------------------*/
 
 footer{
-    height: auto;
+    height: 600px;
     width: 100%;
-    background-color: #e9e4d4;
+    background-color: #ffec47;
 }
 
 footer > .container{
@@ -261,13 +385,40 @@ footer > .container{
 
 
 
+/* ----------------------------------------------------------------------------------
+下層ページ　コース・授業料
+------------------------------------------------------------------------------------*/
+.course{
+    margin-bottom: 40px;
+}
+
 
 /* ----------------------------------------------------------------------------------
-会社概要
+下層ページ　会社概要
 ------------------------------------------------------------------------------------*/
 .gaiyo > .container{
     margin-top: 50px;
 }
+
+.box_info{
+    margin: 40px 0 20px;
+
+}
+
+table{
+    width: 500px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+th{
+    padding: 10px 0;
+}
+
+.policy{
+    margin: 20px 0 50px 30px;
+}
+
 
 
 /* ----------------------------------------------------------------------------------
@@ -275,6 +426,8 @@ footer > .container{
 ------------------------------------------------------------------------------------*/
 .ttl{
     margin: 50px 0 ;
+   
+   
 }
 .voice{
     margin-bottom: 50px;
