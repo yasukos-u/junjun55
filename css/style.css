@@ -1,0 +1,445 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+
+/* ----------------------------------------------------------------------------------
+共通部分 
+------------------------------------------------------------------------------------*/
+html{
+    font-size: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 600; 
+}
+
+h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.4rem;
+}
+
+h5{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+h6{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+p{
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+@media screen and (min-width: 640px) {
+    .container{
+        width: 700px;
+        margin: 0 auto;
+      
+    }
+}
+
+
+/* ----------------------------------------------------------------------------------
+ヘッダー
+------------------------------------------------------------------------------------*/
+
+header{
+    width: 100%;
+    background-color: #ffec47;
+    
+}
+
+header >.container{
+    height: 50px;
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+ 
+}
+
+@media screen and (max-width:640px) { 
+    /* モバイルヘッダー*/
+
+    header > .container{
+        height:50px;
+        
+    }
+
+ 
+}
+
+@media screen and (max-width:640px) {
+    /* ハンバーガーメニュー*/
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        height: 30px;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        
+    }
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color:#000;
+        position: absolute;
+    }
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    .menu-btn.open span {
+        background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+    }
+    .menu-btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .menu-btn.open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+     /* PCはdisplay: flexだけど、縦並びにしたいのでdisplay:block;に変更 */
+     .menu-btn.open .head_nav_list {
+        display: block;
+        left: 0;
+    }
+
+}
+    
+
+.head_logo{
+    padding-top: 20px;
+}
+
+.head-nav{
+    vertical-align: bottom;
+    
+}
+
+.head_nav_list{
+    display: flex;
+   
+}
+
+.head_nav_list > li{
+    margin-left: 20px;
+    padding-bottom: 5px;
+}
+
+
+.head_nav_list > li >a{
+    font: 400 0.9rem 'Work Sans', sans-serif;
+    vertical-align: bottom;
+    font-size: 1.3rem;
+}
+
+.head_nav_list > li >a:hover{
+    opacity: 0.7;
+}
+
+
+
+/* PCの横並びメニューをSP版では縦並びのメニューに */
+@media screen and (max-width: 640px) {
+   .head_nav_list {
+        width: 100%;
+        height: 100%;
+        display: none; /* デフォルトは非表示にします */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 80;
+        padding: 70px 10px 0;
+        background-color:#ffec47;
+    }
+    .head_nav_list li {
+        list-style: none;
+    }
+    .head_nav_list li a {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+        box-sizing: border-box;
+        color:#000;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+    .head_nav_list li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #ffffff;
+        border-right: solid 2px #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+}
+
+/* チェックボックスの非表示 */
+
+
+/* PC版ではメニューボタンを非表示にします */
+@media screen and (min-width: 640px) {
+    .menu-btn {
+        display: none;
+    }
+    .deli_word{
+        display: none;
+    }
+}
+
+
+/* ----------------------------------------------------------------------------------
+トップ画像
+------------------------------------------------------------------------------------*/
+
+.area_top_view{
+    background: url(../img/main02.jpg) no-repeat center top;
+    background-size: cover;
+}
+
+.area_top_view > .container{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 640px) {
+    .area_top_view > .container{
+        height: 500px;
+    }
+  
+}
+
+/* ----------------------------------------------------------------------------------
+コンセプト
+------------------------------------------------------------------------------------*/
+
+.concept{
+    background-color:#ffec47;
+}
+
+.concept > .container{
+    padding: 80px 0;
+}
+
+
+/* ----------------------------------------------------------------------------------
+特徴＿3つのポイント
+------------------------------------------------------------------------------------*/
+.feature > .container{
+    padding: 80px 0 40px 0;
+  
+}
+
+.point{
+    margin-bottom: 50px;
+}
+
+
+/* ----------------------------------------------------------------------------------
+コース・授業料
+------------------------------------------------------------------------------------*/
+
+.menu{
+    background-color:#ffec47;
+}
+
+.menu > .container{
+    padding: 80px 0;
+}
+
+.left_border{
+    padding: 0.3rem 1rem;
+    border-left: 4px solid #000;
+}
+
+
+/* ----------------------------------------------------------------------------------
+声
+------------------------------------------------------------------------------------*/
+.white{
+    background-color: #fff; 
+}
+
+.line{
+  padding: 1rem 2rem;
+  border-top: 3px dashed #ffec47;
+  border-bottom: 3px dashed #ffec47;
+}
+
+
+
+.box_voice{
+    width: 90%;
+    margin: 50px auto 0 ;
+}
+
+
+.box_comment{
+    padding-top: 30px;
+}
+
+.pink {
+    position: relative;
+    padding: 1.5rem 2rem;
+    color: #fff;
+    border-radius: 10px;
+    background: #e95295;
+   
+  }
+  
+  .pink:after {
+    position: absolute;
+    bottom: -9px;
+    left: 1em;
+    width: 0;
+    height: 0;
+    content: '';
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: #e95295 transparent transparent transparent;
+  }
+
+  /* ----------------------------------------------------------------------------------
+保護者の声
+------------------------------------------------------------------------------------*/
+h6 {
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  h6:before {
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 30px);
+    width: 60px;
+    height: 5px;
+    content: '';
+    border-radius: 3px;
+    background: #000;
+  }
+/* ----------------------------------------------------------------------------------
+フッター画像
+------------------------------------------------------------------------------------*/
+
+footer{
+    height: 600px;
+    width: 100%;
+    background-color: #ffec47;
+}
+
+footer > .container{
+    padding: 30px 0 100px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------
+下層ページ　コース・授業料
+------------------------------------------------------------------------------------*/
+.course{
+    margin-bottom: 40px;
+}
+
+
+/* ----------------------------------------------------------------------------------
+下層ページ　会社概要
+------------------------------------------------------------------------------------*/
+.gaiyo > .container{
+    margin-top: 50px;
+}
+
+.box_info{
+    margin: 40px 0 20px;
+
+}
+
+table{
+    width: 500px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+th{
+    padding: 10px 0;
+}
+
+.policy{
+    margin: 20px 0 50px 30px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------
+利用者の声
+------------------------------------------------------------------------------------*/
+.ttl{
+    margin: 50px 0 ;
+}
+.voice{
+    margin-bottom: 50px;
+    color: #2e2930;
+}
+
+/* ----------------------------------------------------------------------------------
+講師紹介
+------------------------------------------------------------------------------------*/
+.teacher{
+    margin-bottom: 120px;
+}
+
+.box_profile{
+    margin-top: 30px;
+}

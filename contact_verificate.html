@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+    <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <title>じゅんじゅん先生のオンライン学習 ゴーゴー塾</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="オンライン学習塾の説明です">
+        <meta property="og:url" content="" />
+        <meta property="og:title" content="" /> 
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="じゅんじゅん先生のオンライン学習 ゴーゴー塾" />
+        <meta property="og:image" content="" />
+        <meta name="twitter:card" content="Summary Card" />
+        <meta property="og:site_name" content="じゅんじゅん先生のオンライン学習 ゴーゴー塾" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="fb:app_id" content="appIDを入力" />
+        <link rel="icon" href="">
+        <link rel="stylesheet" href="css/cssreset-min.css">
+        <link rel="stylesheet" href="css/contact_style.css" >
+        <link rel="stylesheet" href="css/style.css" >
+
+    </head>
+    <body>
+      <header>
+        <div class="container">
+          <div class="head_logo">
+            <a href="index.html" ><img src="img/head_logo.png"></a>
+          </div>
+          <div class="head_nav">
+           <label for="menu-btn.open" class="menu-btn"><span></span></label>
+           <ul class="head_nav_list">
+            <li><a href="index.html">home</a></li>
+            <li><a href="menu.html">メニュー</a></li>
+            <li><a href="voice.html">保護者・生徒の声</a></li>
+            <li><a href="teacher.html">講師</a></li>
+            <li><a href="contact.html">お問合せ</a></li>
+            <li><a href="gaiyo.html">会社概要</a></li>
+           
+        </ul>
+          </div>
+        </div>
+      </header>
+
+      <section class="form">
+        <form action="confirm.php" method="post">
+            <input type="hidden" name="name" value="<?php echo $name; ?>">
+            <input type="hidden" name="furigana" value="<?php echo $furigana; ?>">
+            <input type="hidden" name="email" value="<?php echo $email; ?>">
+            <input type="hidden" name="tel" value="<?php echo $tel; ?>">
+            <input type="hidden" name="sex" value="<?php echo $sex; ?>">
+            <input type="hidden" name="item" value="<?php echo $item; ?>">
+            <input type="hidden" name="content" value="<?php echo $content; ?>">
+            <h1 class="contact-title">お問い合わせ 内容確認</h1>
+            <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>よろしければ「送信する」ボタンを押して下さい。</p>
+            <div>
+                <div>
+                    <label>お名前</label>
+                    <p><?php echo $name; ?></p>
+                </div>
+                <div>
+                    <label>ふりがな</label>
+                    <p><?php echo $furigana; ?></p>
+                </div>
+                <div>
+                    <label>メールアドレス</label>
+                    <p><?php echo $email; ?></p>
+                </div>
+                <div>
+                    <label>電話番号</label>
+                    <p><?php echo $tel; ?></p>
+                </div>
+                <div>
+                    <label>性別</label>
+                    <p><?php echo $sex ?></p>
+                </div>
+                <div>
+                    <label>お問い合わせ項目</label>
+                    <p><?php echo $item; ?></p>
+                </div>
+                <div>
+                    <label>お問い合わせ内容</label>
+                    <p><?php echo nl2br($content); ?></p>
+                </div>
+            </div>
+        <input type="button" value="内容を修正する" onclick="history.back(-1)">
+        <button type="submit" name="submit">送信する</button>
+    </form>
+</div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <img src="./img/head_logo.png">
+        </div>
+
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+       crossorigin="anonymous">
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
