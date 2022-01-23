@@ -44,7 +44,21 @@
       </header>
 
       <section class="form">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYvzSwG8efPU9YklklPJ7neSOcP8KR5Lt65c7_APLHtInpLg/viewform?embedded=true" width="640" height="1208" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+        <form name="contact" method="POST" netlify>
+          <p>
+    <label>お名前: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>メールアドレス: <input type="email" name="email" /></label>
+  </p>
+ 
+  <p>
+    <label>お問い合わせ内容: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+        </form>
     
       </section>
 
